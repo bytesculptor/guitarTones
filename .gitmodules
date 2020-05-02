@@ -1,0 +1,3 @@
+[submodule "extlib/bytesculptorlib"]
+	path = extlib/bytesculptorlib
+	url = https://github.com/bytesculptor/bytesculptorlib.git
