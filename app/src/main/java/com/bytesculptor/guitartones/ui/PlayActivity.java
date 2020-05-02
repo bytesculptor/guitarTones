@@ -1,5 +1,6 @@
-package com.bytesculptor.guitartones;
+package com.bytesculptor.guitartones.ui;
 
+import android.annotation.SuppressLint;
 import android.app.DialogFragment;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,11 +11,14 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bytesculptor.guitartones.R;
+import com.bytesculptor.guitartones.utilities.Tuning;
+import com.bytesculptor.guitartones.dialogs.DialogGameCompleted;
+
 
 public class PlayActivity extends AppCompatActivity
         implements DialogGameCompleted.GameCompletedListener {
 
-    public Tuning tun = new Tuning();
     private int tuningChoice = 0, toneChoice = 0;
 
     private int goodCnt = 0, badCnt = 0;
@@ -37,51 +41,52 @@ public class PlayActivity extends AppCompatActivity
             return;
         }
 
-        TextView tvFind = (TextView) findViewById(R.id.tvFind);
-        tvFind.setText(tun.scale[toneChoice]);
+        TextView tvFind = findViewById(R.id.tvFind);
+        tvFind.setText(Tuning.SCALE[toneChoice]);
 
         setTuning();
 
         setTonesPerString();
         clearTonesOnStrings();
 
-        tvGoodCnt = (TextView) findViewById(R.id.tvGoodCnt);
-        tvBadCnt = (TextView) findViewById(R.id.tvBadCnt);
+        tvGoodCnt = findViewById(R.id.tvGoodCnt);
+        tvBadCnt = findViewById(R.id.tvBadCnt);
 
     }
 
 
+    @SuppressLint("SetTextI18n")
     public void setTuning() {
         for (int i = 1; i < 7; i++) {
             Button bt = (Button) findViewById(getResources().getIdentifier("string" + i, "id", getPackageName()));
 
             switch (tuningChoice) {
                 case 0:
-                    bt.setText(" " + tun.scale[tun.stringOffsetStandard[i - 1]] + " ");
+                    bt.setText(" " + Tuning.SCALE[Tuning.OFFSET_STD[i - 1]] + " ");
                     break;
 
                 case 1:
-                    bt.setText(" " + tun.scale[tun.stringOffsetEb[i - 1]] + " ");
+                    bt.setText(" " + Tuning.SCALE[Tuning.OFFSET_Eb[i - 1]] + " ");
                     break;
 
                 case 2:
-                    bt.setText(" " + tun.scale[tun.stringOffsetD[i - 1]] + " ");
+                    bt.setText(" " + Tuning.SCALE[Tuning.OFFSET_D[i - 1]] + " ");
                     break;
 
                 case 3:
-                    bt.setText(" " + tun.scale[tun.stringOffsetDropD[i - 1]] + " ");
+                    bt.setText(" " + Tuning.SCALE[Tuning.OFFSET_DROP_D[i - 1]] + " ");
                     break;
 
                 case 4:
-                    bt.setText(" " + tun.scale[tun.stringOffsetDropC[i - 1]] + " ");
+                    bt.setText(" " + Tuning.SCALE[Tuning.OFFSET_DROP_C[i - 1]] + " ");
                     break;
 
                 case 5:
-                    bt.setText(" " + tun.scale[tun.stringOffsetDropCis[i - 1]] + " ");
+                    bt.setText(" " + Tuning.SCALE[Tuning.OFFSET_DROP_CIS[i - 1]] + " ");
                     break;
 
                 default:
-                    bt.setText(" " + tun.scale[tun.stringOffsetStandard[i - 1]] + " ");
+                    bt.setText(" " + Tuning.SCALE[Tuning.OFFSET_STD[i - 1]] + " ");
                     break;
             }
         }
@@ -91,45 +96,45 @@ public class PlayActivity extends AppCompatActivity
     public void setTonesPerString() {
         for (int k = 0; k < 6; k++) {
             for (int i = 1; i < 13; i++) {
-                String baseString = "bt" + tun.stringButtons[k] + i;
+                String baseString = "bt" + Tuning.STRING_BUTTONS[k] + i;
                 Button bt = (Button) findViewById(getResources().getIdentifier(baseString, "id", getPackageName()));
-                //bt.setText(tun.scale[(tun.stringOffset2[k] + i) % 12]);
+                //bt.setText(Tuning.scale[(Tuning.stringOffset2[k] + i) % 12]);
                 int pos1 = 0;
 
                 switch (tuningChoice) {
                     case 0:
-                        pos1 = (tun.stringOffsetStandard[k] + i) % 12;
-                        bt.setText(tun.scale[pos1]);
+                        pos1 = (Tuning.OFFSET_STD[k] + i) % 12;
+                        bt.setText(Tuning.SCALE[pos1]);
                         allNotesTable[k][i - 1] = pos1;
                         break;
 
                     case 1:
-                        pos1 = (tun.stringOffsetEb[k] + i) % 12;
-                        bt.setText(tun.scale[pos1]);
+                        pos1 = (Tuning.OFFSET_Eb[k] + i) % 12;
+                        bt.setText(Tuning.SCALE[pos1]);
                         allNotesTable[k][i - 1] = pos1;
                         break;
 
                     case 2:
-                        pos1 = (tun.stringOffsetD[k] + i) % 12;
-                        bt.setText(tun.scale[pos1]);
+                        pos1 = (Tuning.OFFSET_D[k] + i) % 12;
+                        bt.setText(Tuning.SCALE[pos1]);
                         allNotesTable[k][i - 1] = pos1;
                         break;
 
                     case 3:
-                        pos1 = (tun.stringOffsetDropD[k] + i) % 12;
-                        bt.setText(tun.scale[pos1]);
+                        pos1 = (Tuning.OFFSET_DROP_D[k] + i) % 12;
+                        bt.setText(Tuning.SCALE[pos1]);
                         allNotesTable[k][i - 1] = pos1;
                         break;
 
                     case 4:
-                        pos1 = (tun.stringOffsetDropC[k] + i) % 12;
-                        bt.setText(tun.scale[pos1]);
+                        pos1 = (Tuning.OFFSET_DROP_C[k] + i) % 12;
+                        bt.setText(Tuning.SCALE[pos1]);
                         allNotesTable[k][i - 1] = pos1;
                         break;
 
                     case 5:
-                        pos1 = (tun.stringOffsetDropCis[k] + i) % 12;
-                        bt.setText(tun.scale[pos1]);
+                        pos1 = (Tuning.OFFSET_DROP_CIS[k] + i) % 12;
+                        bt.setText(Tuning.SCALE[pos1]);
                         allNotesTable[k][i - 1] = pos1;
                         break;
 
@@ -144,8 +149,8 @@ public class PlayActivity extends AppCompatActivity
     public void clearTonesOnStrings() {
         for (int k = 0; k < 6; k++) {
             for (int i = 1; i < 13; i++) {
-                String baseString = "bt" + tun.stringButtons[k] + i;
-                Button bt = (Button) findViewById(getResources().getIdentifier(baseString, "id", getPackageName()));
+                String baseString = "bt" + Tuning.STRING_BUTTONS[k] + i;
+                Button bt = findViewById(getResources().getIdentifier(baseString, "id", getPackageName()));
                 bt.setText("   ");
             }
         }
@@ -171,7 +176,7 @@ public class PlayActivity extends AppCompatActivity
         bt.setBackgroundColor(Color.RED);
         badCnt++;
         tvBadCnt.setText("" + badCnt);
-        bt.setText(tun.scale[note]);
+        bt.setText(Tuning.SCALE[note]);
 
     }
 
@@ -187,42 +192,42 @@ public class PlayActivity extends AppCompatActivity
         Button bt;
         switch (view.getId()) {
             case R.id.bte1:
-                bt = (Button) findViewById(view.getId());
+                bt = findViewById(view.getId());
                 checkTone(bt, 0, 0);
                 break;
 
             case R.id.bte2:
-                bt = (Button) findViewById(view.getId());
+                bt = findViewById(view.getId());
                 checkTone(bt, 0, 1);
                 break;
 
             case R.id.bte3:
-                bt = (Button) findViewById(view.getId());
+                bt = findViewById(view.getId());
                 checkTone(bt, 0, 2);
                 break;
 
             case R.id.bte4:
-                bt = (Button) findViewById(view.getId());
+                bt = findViewById(view.getId());
                 checkTone(bt, 0, 3);
                 break;
 
             case R.id.bte5:
-                bt = (Button) findViewById(view.getId());
+                bt = findViewById(view.getId());
                 checkTone(bt, 0, 4);
                 break;
 
             case R.id.bte6:
-                bt = (Button) findViewById(view.getId());
+                bt = findViewById(view.getId());
                 checkTone(bt, 0, 5);
                 break;
 
             case R.id.bte7:
-                bt = (Button) findViewById(view.getId());
+                bt = findViewById(view.getId());
                 checkTone(bt, 0, 6);
                 break;
 
             case R.id.bte8:
-                bt = (Button) findViewById(view.getId());
+                bt = findViewById(view.getId());
                 checkTone(bt, 0, 7);
                 break;
 

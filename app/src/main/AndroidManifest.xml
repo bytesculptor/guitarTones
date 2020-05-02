@@ -9,8 +9,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings"
+            android:name=".settings.SettingsActivity"
+            android:label="@string/szSettings"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -27,7 +27,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".PlayActivity"
+            android:name=".ui.PlayActivity"
             android:screenOrientation="landscape"
             android:theme="@style/AppTheme.NoActionBar">
 

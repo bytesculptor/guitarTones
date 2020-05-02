@@ -1,11 +1,5 @@
 <resources>
     <string name="app_name">GuitarTones</string>
-    <string name="action_settings">Settings</string>
-
-    <string name="title_activity_play">Play2Activity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="title_activity_settings">Settings</string>
 
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>

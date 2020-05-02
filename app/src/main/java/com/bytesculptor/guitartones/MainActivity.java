@@ -9,7 +9,9 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+
+import com.bytesculptor.guitartones.ui.PlayActivity;
+import com.bytesculptor.guitartones.utilities.Tuning;
 
 import java.util.ArrayList;
 
@@ -85,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
     public void initSpinnerToneToFind() {
         NoteList.clear();
         for (int i = 0; i < 12; i++) {
-            NoteList.add(tun.scale[i]);
+            NoteList.add(tun.SCALE[i]);
         }
 
         dataAdapterTone = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, NoteList);

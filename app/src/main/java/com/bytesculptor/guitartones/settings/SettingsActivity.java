@@ -1,10 +1,12 @@
-package com.bytesculptor.guitartones;
+package com.bytesculptor.guitartones.settings;
 
 import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceFragmentCompat;
+
+import com.bytesculptor.guitartones.R;
 
 public class SettingsActivity extends AppCompatActivity {
 

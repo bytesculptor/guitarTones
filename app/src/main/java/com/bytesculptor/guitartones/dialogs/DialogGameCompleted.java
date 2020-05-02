@@ -1,4 +1,4 @@
-package com.bytesculptor.guitartones;
+package com.bytesculptor.guitartones.dialogs;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -9,11 +9,10 @@ import android.os.Bundle;
 import android.view.inputmethod.InputMethodManager;
 
 /**
- * Created by ro on 15.09.17.
+ * Created by Ro on 15.09.17
  */
 
 public class DialogGameCompleted extends DialogFragment {
-    private InputMethodManager imm;
 
     public interface GameCompletedListener {
         void onSuccessCopied();
