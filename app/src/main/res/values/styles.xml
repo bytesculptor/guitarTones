@@ -1,50 +1,43 @@
 <resources>
 
-    <style name="Widget.Theme.Fretboard.ActionBar.Fullscreen" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/black_overlay</item>
-    </style>
-
-    <style name="Widget.Theme.Fretboard.ButtonBar.Fullscreen" parent="">
-        <item name="android:background">@color/black_overlay</item>
-        <item name="android:buttonBarStyle">?android:attr/buttonBarStyle</item>
-    </style>
-
-    <style name="VerticalLine">
-        <item name="android:layout_width">2dp</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">?attr/colorPrimary</item>
-        <item name="android:layout_marginTop">0dp</item>
-        <item name="android:layout_marginBottom">0dp</item>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/light_blue_A400</item>
+        <item name="colorPrimaryDark">@color/light_blue_A400</item>
+        <item name="colorAccent">@color/light_blue_A400</item>
+        <!--item name="android:statusBarColor">@color/colorMainBackground</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="toolbarStyle">@style/ToolbarStyle</item>
+        <item name="alertDialogTheme">@style/AlertDialogTheme</item -->
     </style>
 
     <style name="TextAppearanceHelpSubTitle">
         <item name="android:textSize">12sp</item>
-        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textColor">@color/light_blue_A400</item>
     </style>
 
-    <style name="CustomButton" parent="android:Widget.Button.Small">
-        <!-- Customizations  -->
-        <item name="android:minHeight">0dp</item>
-        <item name="android:minWidth">0dp</item>
-        <item name="android:width">3dp</item>
-        <item name="android:height">3dp</item>
-        <item name="android:layout_margin">9dp</item>
-        <item name="android:layout_marginBottom">8dp</item>
-        <item name="android:layout_marginTop">8dp</item>
-        <item name="android:background">@drawable/note_button</item>
+    <style name="CustomButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:minHeight">32dp</item>
+        <item name="android:minWidth">32dp</item>
+        <item name="android:width">0dp</item>
+        <item name="android:height">0dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
+        <item name="android:backgroundTint">@android:color/transparent</item>
+        <item name="android:layout_margin">2dp</item>
+        <item name="android:textAlignment">center</item>
+        <!--item name="android:background">@drawable/note_button</item-->
         <item name="android:clickable">true</item>
         <item name="android:enabled">true</item>
         <item name="android:onClick">onButtonClick</item>
-        <!--item name="tools:ignore">HardcodedText</item-->
     </style>
 
-    <style name="CustomButton2" parent="android:Widget.Button.Small">
-        <!-- Customizations  -->
-        <item name="android:minHeight">0dp</item>
-        <item name="android:minWidth">0dp</item>
-        <item name="android:width">16dp</item>
-        <item name="android:height">8dp</item>
+    <style name="CustomButton2" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:minHeight">32dp</item>
+        <item name="android:minWidth">32dp</item>
+        <item name="android:width">0dp</item>
+        <item name="android:height">0dp</item>
         <item name="android:layout_margin">6dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:layout_marginTop">8dp</item>
         <item name="android:background">@drawable/string_button</item>

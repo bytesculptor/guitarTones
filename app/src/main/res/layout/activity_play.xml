@@ -70,7 +70,7 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/fret4"
+        android:background="@drawable/fretboard_realistic"
         android:columnCount="13"
         android:fadeScrollbars="false"
         android:rowCount="6">
