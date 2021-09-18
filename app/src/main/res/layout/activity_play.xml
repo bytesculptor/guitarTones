@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
@@ -17,55 +19,81 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:layout_marginStart="32dp"
             android:text="Find all "
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <TextView
             android:id="@+id/tvFind"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginEnd="12dp"
+            android:layout_marginStart="8dp"
             android:text="0"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvFindTone"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <TextView
             android:id="@+id/tvGood"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="4dp"
-            android:text="Correct: "
-            android:textSize="18sp" />
+            android:layout_marginEnd="32dp"
+            android:text="Correct:"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <TextView
             android:id="@+id/tvGoodCnt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="8dp"
             android:text="0"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvGood"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <TextView
             android:id="@+id/tvBad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginEnd="4dp"
-            android:text="Wrong: "
-            android:textSize="18sp" />
+            android:layout_marginStart="32dp"
+            android:text="Wrong:"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvGoodCnt"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <TextView
             android:id="@+id/tvBadCnt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
             android:text="0"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvBad"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <GridLayout
         android:layout_width="match_parent"
@@ -80,534 +108,575 @@
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
             android:layout_row="0"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
+            android:minHeight="0dp"
             android:onClick="onButtonClick"
-            android:text="F" />
+            android:text="F"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck,DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/bte2"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="2"
-            android:layout_columnWeight="1"
             android:layout_row="0"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="F#" />
+            android:minHeight="0dp"
+            android:text="F#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/bte3"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="3"
-            android:layout_columnWeight="1"
             android:layout_row="0"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="G" />
+            android:minHeight="0dp"
+            android:text="G"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/bte4"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="4"
-            android:layout_columnWeight="1"
             android:layout_row="0"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="G#" />
+            android:minHeight="0dp"
+            android:text="G#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/bte5"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="5"
-            android:layout_columnWeight="1"
             android:layout_row="0"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="5"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="A" />
+            android:minHeight="0dp"
+            android:text="A"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/bte6"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="6"
-            android:layout_columnWeight="1"
             android:layout_row="0"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="6"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="A#" />
+            android:minHeight="0dp"
+            android:text="A#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/bte7"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="7"
-            android:layout_columnWeight="1"
             android:layout_row="0"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="7"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="B" />
+            android:minHeight="0dp"
+            android:text="B"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/bte8"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="8"
-            android:layout_columnWeight="1"
             android:layout_row="0"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="8"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="C" />
+            android:minHeight="0dp"
+            android:text="C"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/bte9"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="9"
-            android:layout_columnWeight="1"
             android:layout_row="0"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="9"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="C#" />
+            android:minHeight="0dp"
+            android:text="C#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/bte10"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="10"
-            android:layout_columnWeight="1"
             android:layout_row="0"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="10"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="D" />
+            android:minHeight="0dp"
+            android:text="D"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck,DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/bte11"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="11"
-            android:layout_columnWeight="1"
             android:layout_row="0"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="11"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="D#" />
+            android:minHeight="0dp"
+            android:text="D#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/bte12"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="12"
-            android:layout_columnWeight="1"
             android:layout_row="0"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="12"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="E" />
+            android:minHeight="0dp"
+            android:text="E"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btB1"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
             android:layout_row="1"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="C" />
+            android:minHeight="0dp"
+            android:text="C"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btB2"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="2"
-            android:layout_columnWeight="1"
             android:layout_row="1"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="C#" />
+            android:minHeight="0dp"
+            android:text="C#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btB3"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="3"
-            android:layout_columnWeight="1"
             android:layout_row="1"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="D" />
+            android:minHeight="0dp"
+            android:text="D"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btB4"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="4"
-            android:layout_columnWeight="1"
             android:layout_row="1"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="D#" />
+            android:minHeight="0dp"
+            android:text="D#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btB5"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="5"
-            android:layout_columnWeight="1"
             android:layout_row="1"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="5"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="E" />
+            android:minHeight="0dp"
+            android:text="E"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btB6"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="6"
-            android:layout_columnWeight="1"
             android:layout_row="1"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="6"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="F" />
+            android:minHeight="0dp"
+            android:text="F"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btB7"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="7"
-            android:layout_columnWeight="1"
             android:layout_row="1"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="7"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="F#" />
+            android:minHeight="0dp"
+            android:text="F#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btB8"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="8"
-            android:layout_columnWeight="1"
             android:layout_row="1"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="8"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="G" />
+            android:minHeight="0dp"
+            android:text="G"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btB9"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="9"
-            android:layout_columnWeight="1"
             android:layout_row="1"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="9"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="G#" />
+            android:minHeight="0dp"
+            android:text="G#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btB10"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="10"
-            android:layout_columnWeight="1"
             android:layout_row="1"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="10"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="A" />
+            android:minHeight="0dp"
+            android:text="A"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btB11"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="11"
-            android:layout_columnWeight="1"
             android:layout_row="1"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="11"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="A#" />
+            android:minHeight="0dp"
+            android:text="A#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btB12"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="12"
-            android:layout_columnWeight="1"
             android:layout_row="1"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="12"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="B" />
+            android:minHeight="0dp"
+            android:text="B"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btG1"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
             android:layout_row="2"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="G#" />
+            android:minHeight="0dp"
+            android:text="G#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btG2"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="2"
-            android:layout_columnWeight="1"
             android:layout_row="2"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="A" />
+            android:minHeight="0dp"
+            android:text="A"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btG3"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="3"
-            android:layout_columnWeight="1"
             android:layout_row="2"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="A#" />
+            android:minHeight="0dp"
+            android:text="A#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btG4"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="4"
-            android:layout_columnWeight="1"
             android:layout_row="2"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="B" />
+            android:minHeight="0dp"
+            android:text="B"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btG5"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="5"
-            android:layout_columnWeight="1"
             android:layout_row="2"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="5"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="C" />
+            android:minHeight="0dp"
+            android:text="C"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btG6"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="6"
-            android:layout_columnWeight="1"
             android:layout_row="2"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="6"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="C#" />
+            android:minHeight="0dp"
+            android:text="C#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btG7"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="7"
-            android:layout_columnWeight="1"
             android:layout_row="2"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="7"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="D" />
+            android:minHeight="0dp"
+            android:text="D"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btG8"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="8"
-            android:layout_columnWeight="1"
             android:layout_row="2"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="8"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="D#" />
+            android:minHeight="0dp"
+            android:text="D#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btG9"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="9"
-            android:layout_columnWeight="1"
             android:layout_row="2"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="9"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="E" />
+            android:minHeight="0dp"
+            android:text="E"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btG10"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="10"
-            android:layout_columnWeight="1"
             android:layout_row="2"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="10"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="F" />
+            android:minHeight="0dp"
+            android:text="F"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btG11"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="11"
-            android:layout_columnWeight="1"
             android:layout_row="2"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="11"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="F#" />
+            android:minHeight="0dp"
+            android:text="F#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btG12"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="12"
-            android:layout_columnWeight="1"
             android:layout_row="2"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="12"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="G" />
+            android:minHeight="0dp"
+            android:text="G"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btD1"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
             android:layout_row="3"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="D" />
+            android:minHeight="0dp"
+            android:text="D"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btD2"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="2"
-            android:layout_columnWeight="1"
             android:layout_row="3"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="D#" />
+            android:minHeight="0dp"
+            android:text="D#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btD3"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="3"
-            android:layout_columnWeight="1"
             android:layout_row="3"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="E" />
+            android:minHeight="0dp"
+            android:text="E"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btD4"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="4"
-            android:layout_columnWeight="1"
             android:layout_row="3"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="F" />
+            android:minHeight="0dp"
+            android:text="F"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btD5"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="5"
-            android:layout_columnWeight="1"
             android:layout_row="3"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="5"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="F#" />
+            android:minHeight="0dp"
+            android:text="F#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
 
         <Button
@@ -615,156 +684,168 @@
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="6"
-            android:layout_columnWeight="1"
             android:layout_row="3"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="6"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="G" />
+            android:minHeight="0dp"
+            android:text="G"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btD7"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="7"
-            android:layout_columnWeight="1"
             android:layout_row="3"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="7"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="G#" />
+            android:minHeight="0dp"
+            android:text="G#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btD8"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="8"
-            android:layout_columnWeight="1"
             android:layout_row="3"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="8"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="A" />
+            android:minHeight="0dp"
+            android:text="A"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btD9"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="9"
-            android:layout_columnWeight="1"
             android:layout_row="3"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="9"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="A#" />
+            android:minHeight="0dp"
+            android:text="A#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btD10"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="10"
-            android:layout_columnWeight="1"
             android:layout_row="3"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="10"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="B" />
+            android:minHeight="0dp"
+            android:text="B"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btD11"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="11"
-            android:layout_columnWeight="1"
             android:layout_row="3"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="11"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="C" />
+            android:minHeight="0dp"
+            android:text="C"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck,TextContrastCheck" />
 
         <Button
             android:id="@+id/btD12"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="12"
-            android:layout_columnWeight="1"
             android:layout_row="3"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="12"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="C#" />
+            android:minHeight="0dp"
+            android:text="C#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btA1"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
             android:layout_row="4"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="A" />
+            android:minHeight="0dp"
+            android:text="A"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btA2"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="2"
-            android:layout_columnWeight="1"
             android:layout_row="4"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="A#" />
+            android:minHeight="0dp"
+            android:text="A#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btA3"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="3"
-            android:layout_columnWeight="1"
             android:layout_row="4"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="B" />
+            android:minHeight="0dp"
+            android:text="B"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btA4"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="4"
-            android:layout_columnWeight="1"
             android:layout_row="4"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="C" />
+            android:minHeight="0dp"
+            android:text="C"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btA5"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="5"
-            android:layout_columnWeight="1"
             android:layout_row="4"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="5"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="C#" />
+            android:minHeight="0dp"
+            android:text="C#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
 
         <Button
@@ -772,156 +853,168 @@
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="6"
-            android:layout_columnWeight="1"
             android:layout_row="4"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="6"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="D" />
+            android:minHeight="0dp"
+            android:text="D"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btA7"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="7"
-            android:layout_columnWeight="1"
             android:layout_row="4"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="7"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="D#" />
+            android:minHeight="0dp"
+            android:text="D#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btA8"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="8"
-            android:layout_columnWeight="1"
             android:layout_row="4"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="8"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="E" />
+            android:minHeight="0dp"
+            android:text="E"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btA9"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="9"
-            android:layout_columnWeight="1"
             android:layout_row="4"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="9"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="F" />
+            android:minHeight="0dp"
+            android:text="F"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btA10"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="10"
-            android:layout_columnWeight="1"
             android:layout_row="4"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="10"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="F#" />
+            android:minHeight="0dp"
+            android:text="F#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btA11"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="11"
-            android:layout_columnWeight="1"
             android:layout_row="4"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="11"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="G" />
+            android:minHeight="0dp"
+            android:text="G"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btA12"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="12"
-            android:layout_columnWeight="1"
             android:layout_row="4"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="12"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="G#" />
+            android:minHeight="0dp"
+            android:text="G#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btE1"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="1"
-            android:layout_columnWeight="1"
             android:layout_row="5"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="F" />
+            android:minHeight="0dp"
+            android:text="F"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btE2"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="2"
-            android:layout_columnWeight="1"
             android:layout_row="5"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="F#" />
+            android:minHeight="0dp"
+            android:text="F#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btE3"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="3"
-            android:layout_columnWeight="1"
             android:layout_row="5"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="3"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="G" />
+            android:minHeight="0dp"
+            android:text="G"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btE4"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="4"
-            android:layout_columnWeight="1"
             android:layout_row="5"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="4"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="G#" />
+            android:minHeight="0dp"
+            android:text="G#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btE5"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="5"
-            android:layout_columnWeight="1"
             android:layout_row="5"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="5"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="A" />
+            android:minHeight="0dp"
+            android:text="A"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
 
         <Button
@@ -929,91 +1022,98 @@
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="6"
-            android:layout_columnWeight="1"
             android:layout_row="5"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="6"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="A#" />
+            android:minHeight="0dp"
+            android:text="A#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btE7"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="7"
-            android:layout_columnWeight="1"
             android:layout_row="5"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="7"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="B" />
+            android:minHeight="0dp"
+            android:text="B"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btE8"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="8"
-            android:layout_columnWeight="1"
             android:layout_row="5"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="8"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="C" />
+            android:minHeight="0dp"
+            android:text="C"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btE9"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="9"
-            android:layout_columnWeight="1"
             android:layout_row="5"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="9"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="C#" />
+            android:minHeight="0dp"
+            android:text="C#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btE10"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="10"
-            android:layout_columnWeight="1"
             android:layout_row="5"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="10"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="D" />
+            android:minHeight="0dp"
+            android:text="D"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btE11"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="11"
-            android:layout_columnWeight="1"
             android:layout_row="5"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="11"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="D#" />
+            android:minHeight="0dp"
+            android:text="D#"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/btE12"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="12"
-            android:layout_columnWeight="1"
             android:layout_row="5"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="12"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="E" />
+            android:minHeight="0dp"
+            android:text="E"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <!-- base -->
         <Button
@@ -1021,78 +1121,84 @@
             style="@style/CustomButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
             android:layout_row="0"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text=" E " />
+            android:minHeight="0dp"
+            android:text=" E "
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/string2"
             style="@style/CustomButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
             android:layout_row="1"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text=" B " />
+            android:minHeight="0dp"
+            android:text=" B "
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/string3"
             style="@style/CustomButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
             android:layout_row="2"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="G" />
+            android:minHeight="0dp"
+            android:text="G"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/string4"
             style="@style/CustomButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
             android:layout_row="3"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="D" />
+            android:minHeight="0dp"
+            android:text="D"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/string5"
             style="@style/CustomButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
             android:layout_row="4"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="A" />
+            android:minHeight="0dp"
+            android:text="A"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <Button
             android:id="@+id/string6"
             style="@style/CustomButton2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_columnWeight="1"
             android:layout_row="5"
             android:layout_rowWeight="1"
-            android:minHeight="0dp"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
             android:minWidth="0dp"
-            android:text="E" />
+            android:minHeight="0dp"
+            android:text="E"
+            tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
     </GridLayout>
 </LinearLayout>

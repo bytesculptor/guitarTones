@@ -40,18 +40,15 @@ public class PlayActivity extends AppCompatActivity
             finish();
             return;
         }
-
         TextView tvFind = findViewById(R.id.tvFind);
         tvFind.setText(Tuning.SCALE[toneChoice]);
 
         setTuning();
-
         setTonesPerString();
         clearTonesOnStrings();
 
         tvGoodCnt = findViewById(R.id.tvGoodCnt);
         tvBadCnt = findViewById(R.id.tvBadCnt);
-
     }
 
 
@@ -61,10 +58,6 @@ public class PlayActivity extends AppCompatActivity
             Button bt = (Button) findViewById(getResources().getIdentifier("string" + i, "id", getPackageName()));
 
             switch (tuningChoice) {
-                case 0:
-                    bt.setText(" " + Tuning.SCALE[Tuning.OFFSET_STD[i - 1]] + " ");
-                    break;
-
                 case 1:
                     bt.setText(" " + Tuning.SCALE[Tuning.OFFSET_Eb[i - 1]] + " ");
                     break;
@@ -91,7 +84,6 @@ public class PlayActivity extends AppCompatActivity
             }
         }
     }
-
 
     public void setTonesPerString() {
         for (int k = 0; k < 6; k++) {
@@ -156,7 +148,6 @@ public class PlayActivity extends AppCompatActivity
         }
     }
 
-
     private void correctButton(Button bt) {
         bt.setBackgroundColor(Color.GREEN);
         goodCnt++;
@@ -171,13 +162,11 @@ public class PlayActivity extends AppCompatActivity
         }
     }
 
-
     private void wrongButton(Button bt, int note) {
         bt.setBackgroundColor(Color.RED);
         badCnt++;
         tvBadCnt.setText("" + badCnt);
         bt.setText(Tuning.SCALE[note]);
-
     }
 
     private void checkTone(Button bt, int string, int fret) {
