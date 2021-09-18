@@ -43,31 +43,18 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<String> NoteList = new ArrayList<String>();
     private ArrayAdapter<String> dataAdapterTuning, dataAdapterTone;
     private Spinner spTuning, spTone;
-    Tuning tun = new Tuning();
-
+    Tuning tuning = new Tuning();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //setSupportActionBar(toolbar);
 
         spTuning = (Spinner) findViewById(R.id.spTuning);
         initSpinnerTuning();
 
         spTone = (Spinner) findViewById(R.id.spToneToFind);
         initSpinnerToneToFind();
-
-        /*
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
     }
 
     public void initSpinnerTuning() {
@@ -87,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
     public void initSpinnerToneToFind() {
         NoteList.clear();
         for (int i = 0; i < 12; i++) {
-            NoteList.add(tun.SCALE[i]);
+            NoteList.add(tuning.SCALE[i]);
         }
 
         dataAdapterTone = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, NoteList);
@@ -95,8 +82,7 @@ public class MainActivity extends AppCompatActivity {
         spTone.setAdapter(dataAdapterTone);
     }
 
-
-    public void StartPlay(View v) {
+    public void startPlay(View v) {
         Intent intentPlay = new Intent(this, PlayActivity.class);
         intentPlay.putExtra("tuning", spTuning.getSelectedItemPosition());
         intentPlay.putExtra("tone", spTone.getSelectedItemPosition());
