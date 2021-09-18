@@ -1,2 +1,1 @@
-include ':app', ':bytesculptorlib'
-project(':bytesculptorlib').projectDir = new File('extlib/bytesculptorlib/bytesculptorlib')
+include ':app'
