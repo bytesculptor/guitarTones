@@ -37,10 +37,13 @@ import java.util.*
 class MainActivity : AppCompatActivity() {
     private val TuningList = ArrayList<String>()
     private val NoteList = ArrayList<String>()
+    private val RandomList = ArrayList<String>()
     private var dataAdapterTuning: ArrayAdapter<String>? = null
     private var dataAdapterTone: ArrayAdapter<String>? = null
+    private var dataAdapterRandomTone: ArrayAdapter<String>? = null
     private var spTuning: Spinner? = null
     private var spTone: Spinner? = null
+    private var spRandomTone: Spinner? = null
     var tuning = Tuning()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -55,6 +58,8 @@ class MainActivity : AppCompatActivity() {
         initSpinnerTuning()
         spTone = findViewById<View>(R.id.spToneToFind) as Spinner
         initSpinnerToneToFind()
+        spRandomTone = findViewById<View>(R.id.spRandomNumberOfTones) as Spinner
+        initSpinnerRandomTone()
     }
 
     fun initSpinnerTuning() {
@@ -78,6 +83,17 @@ class MainActivity : AppCompatActivity() {
         dataAdapterTone = ArrayAdapter(this, android.R.layout.simple_spinner_item, NoteList)
         dataAdapterTone!!.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
         spTone!!.adapter = dataAdapterTone
+    }
+
+
+    private fun initSpinnerRandomTone() {
+        RandomList.clear()
+        for (i in 2..12) {
+            RandomList.add(i.toString())
+        }
+        dataAdapterRandomTone = ArrayAdapter(this, android.R.layout.simple_spinner_item, RandomList)
+        dataAdapterRandomTone!!.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spRandomTone!!.adapter = dataAdapterRandomTone
     }
 
     fun startPlay(v: View?) {
