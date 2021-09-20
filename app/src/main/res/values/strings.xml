@@ -26,4 +26,11 @@
     <string name="app_name">Guitar Tones</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="play">play</string>
+    <string name="setup">Setup</string>
+    <string name="play_mode">Play Mode</string>
+    <string name="tuning">Tuning</string>
+    <string name="find_all">Find all</string>
+    <string name="randomly_choose">Randomly choose</string>
+    <string name="tones">Tones</string>
 </resources>

@@ -43,11 +43,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="32dp"
+            android:layout_marginEnd="8dp"
             android:text="Find all "
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvFind"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
@@ -56,11 +56,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="8dp"
+            android:layout_marginEnd="60dp"
             android:text="0"
             android:textSize="18sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/tvFindTone"
+            app:layout_constraintEnd_toStartOf="@+id/tvGood"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
@@ -127,7 +127,7 @@
         android:fadeScrollbars="false"
         android:rowCount="6">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/bte1"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -142,7 +142,7 @@
             android:text="F"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/bte2"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -156,7 +156,7 @@
             android:text="F#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/bte3"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -170,7 +170,7 @@
             android:text="G"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/bte4"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -184,7 +184,7 @@
             android:text="G#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/bte5"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -198,7 +198,7 @@
             android:text="A"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/bte6"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -212,7 +212,7 @@
             android:text="A#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/bte7"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -226,7 +226,7 @@
             android:text="B"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/bte8"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -240,7 +240,7 @@
             android:text="C"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/bte9"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -254,7 +254,7 @@
             android:text="C#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/bte10"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -268,7 +268,7 @@
             android:text="D"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck,DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/bte11"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -282,7 +282,7 @@
             android:text="D#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/bte12"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -296,7 +296,7 @@
             android:text="E"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btB1"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -310,7 +310,7 @@
             android:text="C"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btB2"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -324,7 +324,7 @@
             android:text="C#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btB3"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -338,7 +338,7 @@
             android:text="D"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btB4"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -352,7 +352,7 @@
             android:text="D#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btB5"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -366,7 +366,7 @@
             android:text="E"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btB6"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -380,7 +380,7 @@
             android:text="F"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btB7"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -394,7 +394,7 @@
             android:text="F#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btB8"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -408,7 +408,7 @@
             android:text="G"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btB9"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -422,7 +422,7 @@
             android:text="G#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btB10"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -436,7 +436,7 @@
             android:text="A"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btB11"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -450,7 +450,7 @@
             android:text="A#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btB12"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -464,7 +464,7 @@
             android:text="B"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btG1"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -478,7 +478,7 @@
             android:text="G#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btG2"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -492,7 +492,7 @@
             android:text="A"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btG3"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -506,7 +506,7 @@
             android:text="A#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btG4"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -520,7 +520,7 @@
             android:text="B"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btG5"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -534,7 +534,7 @@
             android:text="C"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btG6"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -548,7 +548,7 @@
             android:text="C#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btG7"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -562,7 +562,7 @@
             android:text="D"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btG8"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -576,7 +576,7 @@
             android:text="D#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btG9"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -590,7 +590,7 @@
             android:text="E"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btG10"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -604,7 +604,7 @@
             android:text="F"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btG11"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -618,7 +618,7 @@
             android:text="F#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btG12"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -632,7 +632,7 @@
             android:text="G"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btD1"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -646,7 +646,7 @@
             android:text="D"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btD2"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -660,7 +660,7 @@
             android:text="D#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btD3"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -674,7 +674,7 @@
             android:text="E"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btD4"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -688,7 +688,7 @@
             android:text="F"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btD5"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -703,7 +703,7 @@
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btD6"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -717,7 +717,7 @@
             android:text="G"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btD7"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -731,7 +731,7 @@
             android:text="G#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btD8"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -745,7 +745,7 @@
             android:text="A"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btD9"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -759,7 +759,7 @@
             android:text="A#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btD10"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -773,7 +773,7 @@
             android:text="B"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btD11"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -787,7 +787,7 @@
             android:text="C"
             tools:ignore="HardcodedText, TouchTargetSizeCheck,TextContrastCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btD12"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -801,7 +801,7 @@
             android:text="C#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btA1"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -815,7 +815,7 @@
             android:text="A"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btA2"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -829,7 +829,7 @@
             android:text="A#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btA3"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -843,7 +843,7 @@
             android:text="B"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btA4"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -857,7 +857,7 @@
             android:text="C"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btA5"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -872,7 +872,7 @@
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btA6"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -886,7 +886,7 @@
             android:text="D"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btA7"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -900,7 +900,7 @@
             android:text="D#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btA8"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -914,7 +914,7 @@
             android:text="E"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btA9"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -928,7 +928,7 @@
             android:text="F"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btA10"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -942,7 +942,7 @@
             android:text="F#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btA11"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -956,7 +956,7 @@
             android:text="G"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btA12"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -970,7 +970,7 @@
             android:text="G#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btE1"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -984,7 +984,7 @@
             android:text="F"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btE2"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -998,7 +998,7 @@
             android:text="F#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btE3"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -1012,7 +1012,7 @@
             android:text="G"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btE4"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -1026,7 +1026,7 @@
             android:text="G#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btE5"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -1041,7 +1041,7 @@
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btE6"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -1055,7 +1055,7 @@
             android:text="A#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btE7"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -1069,7 +1069,7 @@
             android:text="B"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btE8"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -1083,7 +1083,7 @@
             android:text="C"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btE9"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -1097,7 +1097,7 @@
             android:text="C#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btE10"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -1111,7 +1111,7 @@
             android:text="D"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btE11"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -1125,7 +1125,7 @@
             android:text="D#"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btE12"
             style="@style/CustomButton"
             android:layout_width="wrap_content"
@@ -1140,7 +1140,7 @@
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
         <!-- base -->
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/string1"
             style="@style/CustomButton2"
             android:layout_width="wrap_content"
@@ -1154,7 +1154,7 @@
             android:text=" E "
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/string2"
             style="@style/CustomButton2"
             android:layout_width="wrap_content"
@@ -1168,7 +1168,7 @@
             android:text=" B "
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/string3"
             style="@style/CustomButton2"
             android:layout_width="wrap_content"
@@ -1182,7 +1182,7 @@
             android:text="G"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/string4"
             style="@style/CustomButton2"
             android:layout_width="wrap_content"
@@ -1196,7 +1196,7 @@
             android:text="D"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/string5"
             style="@style/CustomButton2"
             android:layout_width="wrap_content"
@@ -1210,7 +1210,7 @@
             android:text="A"
             tools:ignore="HardcodedText, TouchTargetSizeCheck, TextContrastCheck, DuplicateSpeakableTextCheck" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/string6"
             style="@style/CustomButton2"
             android:layout_width="wrap_content"
