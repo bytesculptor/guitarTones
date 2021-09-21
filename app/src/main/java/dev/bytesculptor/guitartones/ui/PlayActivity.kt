@@ -23,43 +23,52 @@
  */
 package dev.bytesculptor.guitartones.ui
 
-import androidx.appcompat.app.AppCompatActivity
-import dev.bytesculptor.guitartones.dialogs.DialogGameCompleted.GameCompletedListener
-import android.widget.TextView
-import android.os.Bundle
-import dev.bytesculptor.guitartones.R
-import android.widget.Toast
-import dev.bytesculptor.guitartones.utilities.Tuning
-import android.view.WindowManager
 import android.annotation.SuppressLint
 import android.app.DialogFragment
 import android.graphics.Color
+import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import android.widget.Button
+import android.widget.TextView
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import dev.bytesculptor.guitartones.R
+import dev.bytesculptor.guitartones.databinding.ActivityPlayBinding
 import dev.bytesculptor.guitartones.dialogs.DialogGameCompleted
+import dev.bytesculptor.guitartones.dialogs.DialogGameCompleted.GameCompletedListener
+import dev.bytesculptor.guitartones.utilities.Tuning
 
 class PlayActivity : AppCompatActivity(), GameCompletedListener {
+
+    private lateinit var binding: ActivityPlayBinding
+
     private var tuningChoice = 0
     private var toneChoice = 0
+    private var randomChoice = 0
     private var goodCnt = 0
     private var badCnt = 0
     private val allNotesTable = Array(6) { IntArray(12) }
     private var tvGoodCnt: TextView? = null
     private var tvBadCnt: TextView? = null
+    private var tvFind: TextView? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_play)
+        binding = ActivityPlayBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         val extras = intent.extras
         if (extras != null) {
             tuningChoice = extras.getInt("tuning")
             toneChoice = extras.getInt("tone")
+            randomChoice = extras.getInt("random")
         } else {
             Toast.makeText(baseContext, "main bundle failed", Toast.LENGTH_SHORT).show()
             finish()
             return
         }
-        val tvFind = findViewById<TextView>(R.id.tvFind)
-        tvFind.text = Tuning.SCALE[toneChoice]
+        tvFind = binding.tvFind
+        tvFind?.text = Tuning.SCALE[toneChoice]
         setTuning()
         setTonesPerString()
         clearTonesOnStrings()
@@ -67,8 +76,8 @@ class PlayActivity : AppCompatActivity(), GameCompletedListener {
             WindowManager.LayoutParams.FLAG_FULLSCREEN,
             WindowManager.LayoutParams.FLAG_FULLSCREEN
         ) //show the activity in full screen
-        tvGoodCnt = findViewById(R.id.tvGoodCnt)
-        tvBadCnt = findViewById(R.id.tvBadCnt)
+        tvGoodCnt = binding.tvGoodCnt
+        tvBadCnt = binding.tvBadCnt
     }
 
     @SuppressLint("SetTextI18n")

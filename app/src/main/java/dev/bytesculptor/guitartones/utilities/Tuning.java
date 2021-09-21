@@ -26,7 +26,8 @@ package dev.bytesculptor.guitartones.utilities;
 
 public class Tuning {
     public final static String[] STRING_BUTTONS = {"e", "B", "G", "D", "A", "E"};
-    public final static String[] SCALE = {" C ", "C#", " D ", "D#", " E ", " F ", "F#", " G ", "G#", " A ", "A#", " B "};
+    public final static String[] SCALE = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
+    public static final String[] TUNING = {"Standard", "Eb", "D", "Drop D", "Drop C", "Drop C#"};
 
     public final static int[] OFFSET_STD = {4, 11, 7, 2, 9, 4};
     public final static int[] OFFSET_Eb = {3, 10, 6, 1, 8, 3};
